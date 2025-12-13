@@ -1,26 +1,26 @@
 class KevsTui < Formula
   desc "Terminal UI for browsing CISA Known Exploited Vulnerabilities (KEV)"
   homepage "https://github.com/ethanolivertroy/kevs-tui"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.0/kevs-tui-darwin-arm64"
-      sha256 "dd2199eeba6bab2246eeadd5550d319e602f621c79319b3a6e6003e51315e8ce"
+      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.1/kevs-tui-darwin-arm64"
+      sha256 "9bfe5b8e525e64dc21cda47cc1b66b9180f861032938e582a298017a229e5d0b"
     else
-      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.0/kevs-tui-darwin-amd64"
-      sha256 "91132aeaf32bb8f3a1231580ae23b92a8d8705c949335a1b57807ffcb7e183be"
+      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.1/kevs-tui-darwin-amd64"
+      sha256 "137664f6c8bfa3a0728ca5c7dbe9fff2144d6cbe62ac0f3fab3b5572bcfd953f"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.0/kevs-tui-linux-arm64"
-      sha256 "81c2ba20d3a26e11369b5ff22b664d769361e0faa7a12bb6839e9b70efa040c4"
+      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.1/kevs-tui-linux-arm64"
+      sha256 "aef75b12b051744c8d92bc3980b8de7850881195f9bd91edfc0df96917210207"
     else
-      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.0/kevs-tui-linux-amd64"
-      sha256 "2718d629bc359f1401f9424d47ff18193a8facac5114a114f6df41d74f4f7f42"
+      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.1/kevs-tui-linux-amd64"
+      sha256 "913a5cf70235ae8f407bc90569ccbe7d543770f83202a0c05f63f7978aefadf3"
     end
   end
 
