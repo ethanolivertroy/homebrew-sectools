@@ -5,21 +5,21 @@
 class VantaExporter < Formula
   desc "CLI tool to export Vanta audit evidence organized by control"
   homepage "https://github.com/ethanolivertroy/vanta-go-export"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ethanolivertroy/vanta-go-export/releases/download/v0.1.0/vanta-exporter-darwin-amd64.tar.gz"
-      sha256 "8cf4b3c17f4e1d5075caab23c5cdfe6ca4cd060d601a49a12a16d7a5f9622208"
+      url "https://github.com/ethanolivertroy/vanta-go-export/releases/download/v0.1.1/vanta-exporter-darwin-amd64.tar.gz"
+      sha256 "f491ff3d36178739ecd2f1065fe8523b3e6cec960ba31c3bbeacfa85bc408a62"
 
       def install
         bin.install "vanta-exporter"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ethanolivertroy/vanta-go-export/releases/download/v0.1.0/vanta-exporter-darwin-arm64.tar.gz"
-      sha256 "4f5a10522637bc5c4ce731221d643e274278353214a5ba4d50c58ac67cefd246"
+      url "https://github.com/ethanolivertroy/vanta-go-export/releases/download/v0.1.1/vanta-exporter-darwin-arm64.tar.gz"
+      sha256 "d2d36cbb163e961cc96713c98e4c71d8e10013e10eed8c0fe8dcf64a4127f589"
 
       def install
         bin.install "vanta-exporter"
@@ -29,15 +29,15 @@ class VantaExporter < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ethanolivertroy/vanta-go-export/releases/download/v0.1.0/vanta-exporter-linux-amd64.tar.gz"
-      sha256 "d035087a1e9094754daa828411c8af753ff46822ab01ee39f0f4e1c45ab60f94"
+      url "https://github.com/ethanolivertroy/vanta-go-export/releases/download/v0.1.1/vanta-exporter-linux-amd64.tar.gz"
+      sha256 "c47b6a1a61c5d1e2f3c78598b1030519737a802b0e3d7f2fe8b6b5477301e053"
       def install
         bin.install "vanta-exporter"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ethanolivertroy/vanta-go-export/releases/download/v0.1.0/vanta-exporter-linux-arm64.tar.gz"
-      sha256 "53459bc8c6497255409737ed4654b5986dafb7575a383e3ccf11c685a01bb84c"
+      url "https://github.com/ethanolivertroy/vanta-go-export/releases/download/v0.1.1/vanta-exporter-linux-arm64.tar.gz"
+      sha256 "f089a33b4a0b767ae8f6dbc255fe59745c4506a0f3067560da14bb6c642d81d8"
       def install
         bin.install "vanta-exporter"
       end
