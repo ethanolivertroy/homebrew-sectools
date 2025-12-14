@@ -11,7 +11,7 @@ class VantaExporter < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ethanolivertroy/vanta-go-export/releases/download/v0.1.0/vanta-exporter-darwin-amd64.tar.gz"
-      sha256 "bdba03e5d281c137e755c1dba731133cb92c69ff8e1941ea204e79f309ac6669"
+      sha256 "5e08ced0c1a872fec037c0251d4f4e7fa6ac2ccd2531ab512139d22cde6eeed7"
 
       def install
         bin.install "vanta-exporter"
@@ -19,7 +19,7 @@ class VantaExporter < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ethanolivertroy/vanta-go-export/releases/download/v0.1.0/vanta-exporter-darwin-arm64.tar.gz"
-      sha256 "201f3ce434593f2f4f10ad956ec9cf74415f018cd1c4490d38d1c9e153359888"
+      sha256 "ecea317ab6206954162af2d74dd04768fc91608cb214fe7a3126ed2178629caa"
 
       def install
         bin.install "vanta-exporter"
@@ -30,14 +30,14 @@ class VantaExporter < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ethanolivertroy/vanta-go-export/releases/download/v0.1.0/vanta-exporter-linux-amd64.tar.gz"
-      sha256 "4c8d48a191eb866d1117261acf26ab0536c687a65bc7fcb3927f34cf1a27691f"
+      sha256 "5a8c9b9dfebcea981c028898e8ddc67a5f44093ec8adc9092c91fc34f4215394"
       def install
         bin.install "vanta-exporter"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ethanolivertroy/vanta-go-export/releases/download/v0.1.0/vanta-exporter-linux-arm64.tar.gz"
-      sha256 "b2e89913f85160e3933ff964b5aa1d3daf1689a08c5aafdc16ff385f162257f1"
+      sha256 "244f3b21cb69e20ec3cabbab438132d0b53de61faee3c567813e7dd7f1048270"
       def install
         bin.install "vanta-exporter"
       end
