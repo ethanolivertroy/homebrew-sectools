@@ -26,6 +26,14 @@ Terminal UI for browsing CISA Known Exploited Vulnerabilities (KEV) catalog with
 brew install ethanolivertroy/sectools/kevs-tui
 ```
 
+### fedramp
+
+Terminal UI for browsing FedRAMP authorized cloud services.
+
+```bash
+brew install ethanolivertroy/sectools/fedramp
+```
+
 ### vanta-exporter
 
 CLI tool to export Vanta audit evidence organized by control.
