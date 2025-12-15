@@ -11,7 +11,7 @@ class Fedramp < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ethanolivertroy/fedramp-tui/releases/download/v0.1.1/fedramp-darwin-amd64.tar.gz"
-      sha256 "347746d40fc274f6e7f1f93cc6ddea8c5a8b144dddaa30ffb1231a762f819209"
+      sha256 "39cebce30f3f5f96ca8882aaa91d4c8fc0869918ff8a5c51755dccd90a2ca016"
 
       def install
         bin.install "fedramp"
@@ -19,7 +19,7 @@ class Fedramp < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ethanolivertroy/fedramp-tui/releases/download/v0.1.1/fedramp-darwin-arm64.tar.gz"
-      sha256 "3c697b71428bd37b8c6d32498564c482d35d95c598f841b2ecbf40248891e1ee"
+      sha256 "8245514f83be82eca52948545fcba1273c375cd27ede21c3b8d86841cfcf308a"
 
       def install
         bin.install "fedramp"
@@ -30,14 +30,14 @@ class Fedramp < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ethanolivertroy/fedramp-tui/releases/download/v0.1.1/fedramp-linux-amd64.tar.gz"
-      sha256 "df3f4ea98da069f5f7d576f017971f9d618909e762dfc04777fe0bd1249d25c1"
+      sha256 "e6daadc070006db4a146ce4c9c47f1dbd47425ec2605a43dd7d159c1289fa38d"
       def install
         bin.install "fedramp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ethanolivertroy/fedramp-tui/releases/download/v0.1.1/fedramp-linux-arm64.tar.gz"
-      sha256 "b2743aa359cb00fbe31b940e643cf170a7d31d960be57169710c2514bc7fa9fb"
+      sha256 "88e801abc59bd09b8ea4bfa7ba5603d667574fc12e3ce684e702a757b7fa780d"
       def install
         bin.install "fedramp"
       end
