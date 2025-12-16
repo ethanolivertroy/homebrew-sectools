@@ -11,7 +11,7 @@ class KevsTui < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.0/kevs-tui-darwin-amd64.tar.gz"
-      sha256 "ac0546d69fefe00f083b1983ffecda1254655ff49b04c375f27bb77a91c5e68e"
+      sha256 "f930c7d42430799df81866d87ce931064d11148a26690f88e8a751f41ad8e578"
 
       def install
         bin.install "kevs-tui"
@@ -19,7 +19,7 @@ class KevsTui < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.0/kevs-tui-darwin-arm64.tar.gz"
-      sha256 "c43f150730af2d91908a268fbf0bcf328579b435f583f3e966350a15f0a888ff"
+      sha256 "e4a8beeaec7491e175eb34b63c32fcaa237ffd5271bccd60f9e0571d20084e81"
 
       def install
         bin.install "kevs-tui"
@@ -30,14 +30,14 @@ class KevsTui < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.0/kevs-tui-linux-amd64.tar.gz"
-      sha256 "f05db5e2a1d53eb391d53a4ebbdf8f67351845233ab7d3f2d773d6b2681bea88"
+      sha256 "d37f14ce1c68b6e1b109f3b8f422ce3ae0f6cac9700742df87356694b0ccd410"
       def install
         bin.install "kevs-tui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.0/kevs-tui-linux-arm64.tar.gz"
-      sha256 "04c7de2aef4c6b111cc65529b46f6e42e0508775b67579fdd2c2f8ceff873efe"
+      sha256 "31feb98df780d86b099711c3b346695bb9935f578c2551a7bf14f1ff773e64a6"
       def install
         bin.install "kevs-tui"
       end
