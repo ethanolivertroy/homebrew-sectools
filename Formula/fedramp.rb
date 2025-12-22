@@ -5,21 +5,21 @@
 class Fedramp < Formula
   desc "Terminal UI for browsing FedRAMP authorized cloud services"
   homepage "https://github.com/ethanolivertroy/fedramp-tui"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ethanolivertroy/fedramp-tui/releases/download/v0.1.1/fedramp-darwin-amd64.tar.gz"
-      sha256 "39cebce30f3f5f96ca8882aaa91d4c8fc0869918ff8a5c51755dccd90a2ca016"
+      url "https://github.com/ethanolivertroy/fedramp-tui/releases/download/v0.1.2/fedramp-darwin-amd64.tar.gz"
+      sha256 "49e55a2f40b5f7f6c68d2efdf76297a1a76655955ecf0ac47a6ae31b2af21773"
 
       def install
         bin.install "fedramp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ethanolivertroy/fedramp-tui/releases/download/v0.1.1/fedramp-darwin-arm64.tar.gz"
-      sha256 "8245514f83be82eca52948545fcba1273c375cd27ede21c3b8d86841cfcf308a"
+      url "https://github.com/ethanolivertroy/fedramp-tui/releases/download/v0.1.2/fedramp-darwin-arm64.tar.gz"
+      sha256 "60b656acf180d6c40dbe55c738b1a34f7fb2dd61851ce2ed905fab3204feea12"
 
       def install
         bin.install "fedramp"
@@ -29,15 +29,15 @@ class Fedramp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ethanolivertroy/fedramp-tui/releases/download/v0.1.1/fedramp-linux-amd64.tar.gz"
-      sha256 "e6daadc070006db4a146ce4c9c47f1dbd47425ec2605a43dd7d159c1289fa38d"
+      url "https://github.com/ethanolivertroy/fedramp-tui/releases/download/v0.1.2/fedramp-linux-amd64.tar.gz"
+      sha256 "2987d8e780c193af002719143232dc8ba2008f8cfebebc2a7f0a36cbdbaa53bb"
       def install
         bin.install "fedramp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ethanolivertroy/fedramp-tui/releases/download/v0.1.1/fedramp-linux-arm64.tar.gz"
-      sha256 "88e801abc59bd09b8ea4bfa7ba5603d667574fc12e3ce684e702a757b7fa780d"
+      url "https://github.com/ethanolivertroy/fedramp-tui/releases/download/v0.1.2/fedramp-linux-arm64.tar.gz"
+      sha256 "caa166fa2a13c946b22a2cb92d79868a1b95a44083cb48f81909299f84c9cc09"
       def install
         bin.install "fedramp"
       end
