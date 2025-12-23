@@ -5,21 +5,21 @@
 class KevsTui < Formula
   desc "Terminal UI for browsing CISA Known Exploited Vulnerabilities (KEV)"
   homepage "https://github.com/ethanolivertroy/kevs-tui"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.1/kevs-tui-darwin-amd64.tar.gz"
-      sha256 "91f7a3166c96ac94c842ac0d23fc2406eb60832b895a254fa2b36762839ff8f0"
+      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.2/kevs-tui-darwin-amd64.tar.gz"
+      sha256 "2aee962cb01cae6d234e5841cbfab551a3d4853633848981964a1e980c8ef8cc"
 
       def install
         bin.install "kevs-tui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.1/kevs-tui-darwin-arm64.tar.gz"
-      sha256 "20cf945152a60852ee1476830e00222630309c7f084d7c7ef35150a3928dd2b8"
+      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.2/kevs-tui-darwin-arm64.tar.gz"
+      sha256 "92deec720d44d9f5b90c2a74da4c383f8117fb8c8b5b2ca10d02765f1421f72c"
 
       def install
         bin.install "kevs-tui"
@@ -29,15 +29,15 @@ class KevsTui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.1/kevs-tui-linux-amd64.tar.gz"
-      sha256 "8a4ca0acfaf4e89c360f7c75fccffcaac863777c2b78883ac4d3893f20c1bc41"
+      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.2/kevs-tui-linux-amd64.tar.gz"
+      sha256 "36a7d14217c062741f8629f210ac54d45707dc698a4cd3b2f123afd424c73058"
       def install
         bin.install "kevs-tui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.1/kevs-tui-linux-arm64.tar.gz"
-      sha256 "0a46754de25c6e7df9ae4c73b31084b0cce6f37fad43839a137718bc5970bcb5"
+      url "https://github.com/ethanolivertroy/kevs-tui/releases/download/v0.1.2/kevs-tui-linux-arm64.tar.gz"
+      sha256 "18b9f34698373f5e197f011bde5271e00866e28c5eca04c36a7f0a068f399c2e"
       def install
         bin.install "kevs-tui"
       end
