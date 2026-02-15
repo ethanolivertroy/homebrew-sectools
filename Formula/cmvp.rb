@@ -5,21 +5,21 @@
 class Cmvp < Formula
   desc "Terminal UI for searching NIST CMVP validated cryptographic modules"
   homepage "https://github.com/ethanolivertroy/cmvp-tui"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ethanolivertroy/cmvp-tui/releases/download/v0.1.0/cmvp-darwin-amd64.tar.gz"
-      sha256 "23876c45a96f2a4f0bf559a2217e5cf449f3ebfbabfafdcc74ae01a82901c38c"
+      url "https://github.com/ethanolivertroy/cmvp-tui/releases/download/v0.1.1/cmvp-darwin-amd64.tar.gz"
+      sha256 "8334a7a464e291ffdfd1a266c31553df6e94c4ae80f17d45f0eedeab3bbcb7dd"
 
       def install
         bin.install "cmvp"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ethanolivertroy/cmvp-tui/releases/download/v0.1.0/cmvp-darwin-arm64.tar.gz"
-      sha256 "0345a3dcee8b60547d054daaeae9dec3d1ebe33389d930b0dc17ee283a76d735"
+      url "https://github.com/ethanolivertroy/cmvp-tui/releases/download/v0.1.1/cmvp-darwin-arm64.tar.gz"
+      sha256 "60d48506a5e5fc94414306d707a1d59d556f3041f977cbae76d35a8952fd876c"
 
       def install
         bin.install "cmvp"
@@ -29,15 +29,15 @@ class Cmvp < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ethanolivertroy/cmvp-tui/releases/download/v0.1.0/cmvp-linux-amd64.tar.gz"
-      sha256 "34f820d24c95cca4db509d99e4565fa04598049c0da14abbfa1c9b0bebbfeedc"
+      url "https://github.com/ethanolivertroy/cmvp-tui/releases/download/v0.1.1/cmvp-linux-amd64.tar.gz"
+      sha256 "3ab459a9561afe028cf9b07549f4dbf3034634b55c8e9f32bacdbefeda00860d"
       def install
         bin.install "cmvp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ethanolivertroy/cmvp-tui/releases/download/v0.1.0/cmvp-linux-arm64.tar.gz"
-      sha256 "5f4b3ee279865696fa608310b87a672a71faa49cba56907a316f2fb3370c3963"
+      url "https://github.com/ethanolivertroy/cmvp-tui/releases/download/v0.1.1/cmvp-linux-arm64.tar.gz"
+      sha256 "dcca29fff7e5e9337c85f91d2e975aecb3e7b8aba42a23000a678177b074cf26"
       def install
         bin.install "cmvp"
       end
@@ -45,6 +45,6 @@ class Cmvp < Formula
   end
 
   test do
-    assert_match "CMVP", shell_output("#{bin}/cmvp --help 2>&1", 1)
+    assert_match version.to_s, shell_output("#{bin}/cmvp --version")
   end
 end
