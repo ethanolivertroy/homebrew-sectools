@@ -14,22 +14,29 @@ cask "cmvp" do
   on_macos do
     on_intel do
       url "https://github.com/ethanolivertroy/cmvp-tui/releases/download/v#{version}/cmvp-darwin-amd64.tar.gz"
-      sha256 "2be991189fd25f8ee01151155b1720e09ac30a912079c56c56e75de4697b8cad"
+      sha256 "77de86aa28a42c80f80e69a0f5f98b080f47bbad7460ee8e142071b40c24fa61"
     end
     on_arm do
       url "https://github.com/ethanolivertroy/cmvp-tui/releases/download/v#{version}/cmvp-darwin-arm64.tar.gz"
-      sha256 "3a45f9249d9905e2193b23d5cfd2aa6203e8ba945f2556b042276f5ba6d8f409"
+      sha256 "c97d70807d7f617b1ef9d2b08de68bfa960748ff841f720a1e6442da43ce6226"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/ethanolivertroy/cmvp-tui/releases/download/v#{version}/cmvp-linux-amd64.tar.gz"
-      sha256 "b5c72e00bd29ab5a8e4017137f6105bf06c981e21424d80b6e9cba50f18f9f07"
+      sha256 "b350f237fdf34a257c34b4eb61f91f1db4e7b8c764171eedd64d8d31fd651a8b"
     end
     on_arm do
       url "https://github.com/ethanolivertroy/cmvp-tui/releases/download/v#{version}/cmvp-linux-arm64.tar.gz"
-      sha256 "79a6672bdb5dbfcdb400ec11373b88a8147e5734ca7a4352e07e0a62059a61b0"
+      sha256 "8692b773aa3ff857949c806ff08ee691403a72d3c249746285ebdc021d2148b5"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "#{staged_path}/cmvp"]
     end
   end
 
